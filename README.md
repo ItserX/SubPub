@@ -23,11 +23,12 @@ go run cmd/client/main.go -mode sub -key test-key # run client in subscriber mod
 go run cmd/client/main.go -mode pub -key test-key -message "Hello World!" # run client in publisher mode
 go run cmd/client/main.go -mode both -key test-key -message "Hello World!" # run in client subscriber and publisher mode
 ```
+
 ## Flags
-    -addr: Server address (default: localhost:50051)
-    -mode: Client mode: sub, pub, or both (default: both)
-    -key: Subscription/publish key (default: test-key)
-    -message: Message to publish (default: Hello!)
+  - addr: Server address (default: localhost:50051)
+  - mode: Client mode: sub, pub, or both (default: both)
+  - key: Subscription/publish key (default: test-key)
+  - message: Message to publish (default: Hello!)
 
 ## Configuration
 ```
