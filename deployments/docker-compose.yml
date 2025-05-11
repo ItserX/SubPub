@@ -1,0 +1,28 @@
+services:
+  pubsub-server:
+    build:
+      context: ../  
+      dockerfile: deployments/Dockerfile.server
+    ports:
+      - "50051:50051"
+    volumes:
+      - ../config.json:/app/config.json 
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:50051"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+  pubsub-client:
+    build:
+      context: ../
+      dockerfile: deployments/Dockerfile.client
+    depends_on:
+      pubsub-server:
+        condition: service_healthy
+    environment:
+      - MODE=both
+      - KEY=test-key
+      - MESSAGE=Hello
+    restart: on-failure
