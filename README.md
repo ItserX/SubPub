@@ -25,10 +25,10 @@ go run cmd/client/main.go -mode both -key test-key -message "Hello World!" # run
 ```
 
 ## Flags
-  - addr: Server address (default: localhost:50051)
-  - mode: Client mode: sub, pub, or both (default: both)
-  - key: Subscription/publish key (default: test-key)
-  - message: Message to publish (default: Hello!)
+  - -addr: Server address (default: localhost:50051)
+  - -mode: Client mode: sub, pub, or both (default: both)
+  - -key: Subscription/publish key (default: test-key)
+  - -message: Message to publish (default: Hello!)
 
 ## Configuration
 ```
