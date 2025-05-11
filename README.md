@@ -2,11 +2,11 @@
 A gRPC-based publish-subscribe service implementation using the subpub package.
 
 ## Features
-  gRPC API for subscribing to and publishing events
-  Graceful shutdown
-  Dependency injection 
-  Logging
-  Thread-safe message handling
+  - gRPC API for subscribing to and publishing events
+  - Graceful shutdown
+  - Dependency injection 
+  - Logging
+  - Thread-safe message handling
 
 # Run directly
 ```bash
