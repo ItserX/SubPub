@@ -1,7 +1,7 @@
-## gRPC PubSub Service
+# gRPC PubSub Service
 A gRPC-based publish-subscribe service implementation using the subpub package.
 
-## Features
+# Features
   - gRPC API for subscribing to and publishing events
   - Graceful shutdown
   - Dependency injection 
