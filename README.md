@@ -29,7 +29,7 @@ go run cmd/client/main.go -mode both -key test-key -message "Hello World!" # run
     -key: Subscription/publish key (default: test-key)
     -message: Message to publish (default: Hello!)
 
-# Configuration
+## Configuration
 ```
 {
     "server": {
@@ -41,4 +41,12 @@ go run cmd/client/main.go -mode both -key test-key -message "Hello World!" # run
         "file": "pubsub.log"
     }
 }
+```
+
+## Tests
+```bash
+go test -cover
+PASS
+coverage: 97.8% of statements
+ok      github.com/ItserX/subpub/internal/subpub        0.305s
 ```
